@@ -1,0 +1,10 @@
+import os,argparse,sys,subprocess
+cwd=os.getcwd()
+print(cwd)
+
+parser=argparse.ArgumentParser(description='Enter the number of older kernels to remove?')
+parser.add_argument('--number', '-n', type=int, help='the number of older kernels to remove')
+proc = subprocess.run(['yum', 'list', 'kernel'])
+cur_kernel = subprocess.run(['uname', '-r'])
+
+print (f"Current kernel is {cur_kernel}")
