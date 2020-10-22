@@ -7,4 +7,3 @@ parser.add_argument('--number', '-n', type=int, help='the number of older kernel
 proc = subprocess.run(['yum', 'list', 'kernel'])
 cur_kernel = subprocess.run(['uname', '-r'])
 
-print (f"Current kernel is {cur_kernel}")
